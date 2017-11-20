@@ -22,31 +22,31 @@ public class SecretKeyServer {
 		int weekOfMonth = calendar.get(Calendar.WEEK_OF_MONTH);
 		String password = "password";
 		
-        StringBuilder builder1 = new StringBuilder();
-        builder1.append(password);
-        builder1.append(year);
-        builder1.append(month);
-        builder1.append(date);
-        builder1.append(hour);
-        builder1.append(minute);
-        builder1.append(dayOfWeek);
-        builder1.append(dayOfMonth);
-        builder1.append(dayOfYear);
-        builder1.append(weekOfYear);
-        builder1.append(weekOfMonth);
-        
-        StringBuilder builder2 = new StringBuilder();
-        builder2.append(password);
-        builder2.append(year);
-        builder2.append(month);
-        builder2.append(date);
-        builder2.append(hour);
-        builder2.append(minute - 1);
-        builder2.append(dayOfWeek);
-        builder2.append(dayOfMonth);
-        builder2.append(dayOfYear);
-        builder2.append(weekOfYear);
-        builder2.append(weekOfMonth);
+		StringBuilder builder1 = new StringBuilder();
+		builder1.append(password);
+		builder1.append(year);
+		builder1.append(month);
+		builder1.append(date);
+		builder1.append(hour);
+		builder1.append(minute);
+		builder1.append(dayOfWeek);
+		builder1.append(dayOfMonth);
+		builder1.append(dayOfYear);
+		builder1.append(weekOfYear);
+		builder1.append(weekOfMonth);
+
+		StringBuilder builder2 = new StringBuilder();
+		builder2.append(password);
+		builder2.append(year);
+		builder2.append(month);
+		builder2.append(date);
+		builder2.append(hour);
+		builder2.append(minute - 1);
+		builder2.append(dayOfWeek);
+		builder2.append(dayOfMonth);
+		builder2.append(dayOfYear);
+		builder2.append(weekOfYear);
+		builder2.append(weekOfMonth);
         
 		String md5Hex1 = DigestUtils.md5Hex(builder1.toString());
 		String md5Hex2 = DigestUtils.md5Hex(builder2.toString());
